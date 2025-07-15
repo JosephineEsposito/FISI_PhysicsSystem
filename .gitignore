@@ -1,5 +1,6 @@
 # Visual Studio 2015 user specific files
 .vs/
+.vsconfig
 
 # Compiled Object files
 *.slo
@@ -49,6 +50,21 @@ SourceArt/**/*.tga
 Binaries/*
 Plugins/**/Binaries/*
 
+# --- Ignore all FMOD binaries ---
+Plugins/FMODStudio/Binaries/Win64/*
+Plugins/FMODStudio/Binaries/Win64/**
+
+# --- Allow only necessary FMOD runtime binaries ---
+!Plugins/FMODStudio/Binaries/Win64/fmod.dll
+!Plugins/FMODStudio/Binaries/Win64/fmod_vc.lib
+!Plugins/FMODStudio/Binaries/Win64/fmodL.dll
+!Plugins/FMODStudio/Binaries/Win64/fmodL_vc.lib
+!Plugins/FMODStudio/Binaries/Win64/fmodstudio.dll
+!Plugins/FMODStudio/Binaries/Win64/fmodstudio_vc.lib
+!Plugins/FMODStudio/Binaries/Win64/fmodstudioL.dll
+!Plugins/FMODStudio/Binaries/Win64/fmodstudioL_vc.lib
+!Plugins/FMODStudio/Binaries/Win64/resonanceaudio.dll
+
 # Builds
 Build/*
 
@@ -72,3 +88,8 @@ Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# Others
+UpgradeLog.htm
+Content/Debug/*
+Content/__ExternalActors__/Debug
